@@ -4,7 +4,9 @@ import './index.css'
 import App from './App.tsx'
 import {NT4Provider} from "@frc-web-components/react";
 import {BrowserRouter, Route, Routes} from "react-router";
-import Dashboard from "./routes/Dashboard.tsx";
+import { Box } from '@mui/material';
+
+
 
 const testing: boolean = true;
 
@@ -14,12 +16,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <NT4Provider address={address}>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={
-              <App />
-          }/>
-          <Route path="contacts" element={<Dashboard />}/>
-        </Routes>
+        <App />
       </BrowserRouter>
     </NT4Provider>
   </StrictMode>,
