@@ -15,6 +15,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -32,15 +33,5 @@ body {
 }
 
 .LoggerLogFileSaveButton{
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-.LoggerConfiguration{
-  height: 40vh;
-}
-
-
-.LoggerFile{
-  height: 45vh;
+  align-content: center;
 }
