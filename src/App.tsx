@@ -21,6 +21,9 @@ function App() {
       <Routes>
         <Route path="dash" element={<Dashboard />}/>
         <Route path="logs" element={<Logger />}/>
+        <Route path="history" element={"Not made yet"}/>
+        <Route path="settings" element={"Not made yet"}/>
+        <Route path="configure" element={"Not made yet"}/>
       </Routes>
       <Link to="/dash"></Link>
     </>

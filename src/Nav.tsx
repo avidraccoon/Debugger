@@ -37,6 +37,9 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import SettingsIcon from '@mui/icons-material/Settings';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import HistoryIcon from '@mui/icons-material/History';
+import DescriptionIcon from '@mui/icons-material/Description';
+import BuildIcon from '@mui/icons-material/Build';
 const drawerWidth = 240;
 
 const openedMixin = (theme: Theme): CSSObject => ({
@@ -182,6 +185,7 @@ function Nav() {
           }
         </DrawerHeader>
         <Divider />
+        <Stack minHeight={0} height={1}>
         <List>
         <ListItem disablePadding sx={{ display: 'block' }}>
             <NavLink to="/dash">
@@ -200,7 +204,55 @@ function Nav() {
             </NavLink>
           </ListItem>
           <ListItem disablePadding sx={{ display: 'block' }}>
-            <NavLink to="/">
+            <NavLink to="/history">
+              <ListItemButton sx={buttonSettings}>
+                <ListItemIcon
+                  sx={iconSettings}
+                >
+                  <HistoryIcon/>
+                </ListItemIcon>
+                <ListItemText sx={hideOrShow}>
+                  <Typography>
+                    History
+                  </Typography>
+                </ListItemText>
+              </ListItemButton>
+            </NavLink>
+          </ListItem>
+          <ListItem disablePadding sx={{ display: 'block' }}>
+            <NavLink to="/logs">
+              <ListItemButton sx={buttonSettings}>
+                <ListItemIcon
+                  sx={iconSettings}
+                >
+                  <DescriptionIcon/>
+                </ListItemIcon>
+                <ListItemText sx={hideOrShow}>
+                  <Typography>
+                    Logs
+                  </Typography>
+                </ListItemText>
+              </ListItemButton>
+            </NavLink>
+          </ListItem>
+          <ListItem disablePadding sx={{ display: 'block' }}>
+            <NavLink to="/configure">
+              <ListItemButton sx={buttonSettings}>
+                <ListItemIcon
+                  sx={iconSettings}
+                >
+                  <BuildIcon/>
+                </ListItemIcon>
+                <ListItemText sx={hideOrShow}>
+                  <Typography>
+                    Configure
+                  </Typography>
+                </ListItemText>
+              </ListItemButton>
+            </NavLink>
+          </ListItem>
+          <ListItem disablePadding sx={{ display: 'block' }}>
+            <NavLink to="/settings">
               <ListItemButton sx={buttonSettings}>
                 <ListItemIcon
                   sx={iconSettings}
@@ -216,6 +268,7 @@ function Nav() {
             </NavLink>
           </ListItem>
         </List>
+        </Stack>
       </Drawer>
     </>
   )
